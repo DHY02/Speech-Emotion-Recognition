@@ -8,7 +8,7 @@ class_labels: ["angry", "fear", "happy", "neutral", "sad", "surprise"]  # 情感
 
 # 特征
 feature_folder: features/6-category/opensmile_casia/  # 特征存储文件夹
-feature_method: o  # 'o': opensmile, 'l': librosa  # 特征提取方式
+feature_method: l  # 'o': opensmile, 'l': librosa  # 特征提取方式
 
 # Opensmile 配置，只在 'feature_method: o' 时需要设置
 opensmile_config: IS10_paraling  # Opensmile 标准特征集

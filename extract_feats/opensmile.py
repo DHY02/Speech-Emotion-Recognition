@@ -36,10 +36,10 @@ def get_feature_opensmile(config, filepath: str) -> list:
     # single_feature.csv 路径
     single_feat_path = os.path.join(BASE_DIR, config.feature_folder, 'single_feature.csv')
     # Opensmile 配置文件路径
-    opensmile_config_path = os.path.join(config.opensmile_path, 'config', config.opensmile_config + '.conf')
+    opensmile_config_path = os.path.join(config.opensmile_path, 'config', './is09-13/', config.opensmile_config + '.conf')
 
     # Opensmile 命令
-    cmd = 'cd ' + config.opensmile_path + ' && ./SMILExtract -C ' + opensmile_config_path + ' -I ' + filepath + ' -O ' + single_feat_path + ' -appendarff 0'
+    cmd = 'cd ' + config.opensmile_path + ' && ./bin/SMILExtract -C ' + opensmile_config_path + ' -I ' + filepath + ' -O ' + single_feat_path + ' -appendarff 0'
     print("Opensmile cmd: ", cmd)
     os.system(cmd)
 

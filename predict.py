@@ -28,11 +28,11 @@ def predict(config, audio_path: str, model) -> None:
     result_prob = model.predict_proba(test_feature)
     print('Recogntion: ', config.class_labels[int(result)])
     print('Probability: ', result_prob)
-    utils.radar(result_prob, config.class_labels)
-
+    # utils.radar(result_prob, config.class_labels)
+    return result, result_prob
 
 if __name__ == '__main__':
-    audio_path = '/Users/zou/Renovamen/Developing/Speech-Emotion-Recognition/datasets/CASIA/angry/201-angry-liuchanhg.wav'
+    audio_path = '/home/Speech-Emotion-Recognition/casia/liuchanhg/angry/201.wav'
 
     config = utils.parse_opt()
     model = models.load(config)
